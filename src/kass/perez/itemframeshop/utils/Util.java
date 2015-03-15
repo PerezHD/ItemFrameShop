@@ -2,6 +2,8 @@ package kass.perez.itemframeshop.utils;
 
 import java.util.logging.Level;
 
+import kass.perez.itemframeshop.Plugin;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -10,8 +12,6 @@ import org.bukkit.FireworkEffect.Type;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.FireworkMeta;
-
-import com.kassestral.plugins.bishop.Plugin;
 
 public class Util {
 	

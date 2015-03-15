@@ -2,6 +2,8 @@ package kass.perez.itemframeshop;
 
 import java.util.logging.Level;
 
+import kass.perez.itemframeshop.utils.Util;
+
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
