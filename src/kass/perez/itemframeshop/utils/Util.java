@@ -9,6 +9,7 @@ import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.FireworkEffect.Type;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -18,6 +19,10 @@ public class Util {
 	
 	public static void send(Player player, String message){
 		player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+	}
+	
+	public static void send(CommandSender sender, String message){
+		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
 	}
 	
 	public static void log(Level level, String log){

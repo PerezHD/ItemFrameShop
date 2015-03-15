@@ -2,6 +2,7 @@ package kass.perez.itemframeshop;
 
 import java.util.logging.Level;
 
+import kass.perez.itemframeshop.commands.PluginCommandHandler;
 import kass.perez.itemframeshop.listeners.EventListeners;
 import kass.perez.itemframeshop.listeners.PlayerListeners;
 import kass.perez.itemframeshop.utils.Util;
@@ -37,7 +38,7 @@ public class Plugin extends JavaPlugin {
 	}
 
 	public void registerCommands() {
-		
+		getCommand("ifs").setExecutor(new PluginCommandHandler());
 	}
 
 	public void registerEvents() {
