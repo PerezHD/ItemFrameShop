@@ -36,7 +36,6 @@ public class Plugin extends JavaPlugin {
 		 */
 		storage.setupFile();
 		message_storage.setupFile();
-		Configuration.loadConfiguration();
 		/*
 		 * Hooks
 		 */
