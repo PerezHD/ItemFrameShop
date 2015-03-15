@@ -3,3 +3,6 @@ author: PerezHD, Kassestral
 version: 1.0.0
 main: kass.perez.itemframeshop.Plugin
 description: A item frame shop plugin!
+commands:
+  ifs:
+    description: The main command!

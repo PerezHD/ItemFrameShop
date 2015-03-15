@@ -12,7 +12,7 @@ public class DataStorage {
     private FileConfiguration fileFile;
 
     public DataStorage() {
-            this.folder = new File("plugins" + File.separator + "Bishop");
+            this.folder = new File("plugins" + File.separator + "ItemFrameShop");
             this.file = new File(folder, "shops.yml");
             this.fileFile = null;
     }

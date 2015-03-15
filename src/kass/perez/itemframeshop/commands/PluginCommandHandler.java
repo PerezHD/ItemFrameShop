@@ -28,6 +28,12 @@ public class PluginCommandHandler implements CommandExecutor {
 					return true;
 				}
 			}
+			if (args.length == 1){
+				if (args[0].equalsIgnoreCase("version")){
+					Util.send(sender, "&aYou are currently running v" + Plugin.getInstance().getDescription().getVersion());
+					return true;
+				}
+			}
 		} else {
 			Util.send(sender, "&cYou do not have enough permissions.");
 			return true;
