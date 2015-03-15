@@ -16,7 +16,6 @@ import org.bukkit.inventory.meta.FireworkMeta;
 
 public class Util {
 	
-	
 	public static void send(Player player, String message){
 		player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
 	}
@@ -38,4 +37,5 @@ public class Util {
 		fireworkmeta.setPower(1);     
 		firework.setFireworkMeta(fireworkmeta);
 	}
+
 }
