@@ -12,9 +12,9 @@ public class DataStorage {
     private FileConfiguration fileFile;
 
     public DataStorage() {
-            this.folder = new File("plugins" + File.separator + "ItemFrameShop");
-            this.file = new File(folder, "shops.yml");
-            this.fileFile = null;
+    	this.folder = new File("plugins" + File.separator + "ItemFrameShop");
+    	this.file = new File(folder, "shops.yml");
+    	this.fileFile = null;
     }
    
     /**
@@ -23,9 +23,9 @@ public class DataStorage {
      * @author HeadGam3z.
      */
     public void setupFile() {
-            getFile().options().header("Where all shops get saved to.");
-            getFile().options().copyDefaults(true);
-            saveFile();
+    	getFile().options().header("Where all shops get saved to.");
+    	getFile().options().copyDefaults(true);
+    	saveFile();
     }
    
     /**
@@ -36,21 +36,21 @@ public class DataStorage {
      * @author HeadGam3z.
      */
     public FileConfiguration getFile() {
-            if (!folder.exists()) {
-                    folder.mkdir();
-            }
-            if (!file.exists()) {
-                    try {
-                            file.createNewFile();
-                    } catch (IOException e) {
-                            e.getMessage();
-                            e.printStackTrace();
-                    }
-            }
-            if (fileFile == null) {
-                    reloadFile();
-            }
-            return fileFile;
+    	if (!folder.exists()) {
+    		folder.mkdir();
+    	}
+    	if (!file.exists()) {
+    		try {
+    			file.createNewFile();
+    		} catch (IOException e) {
+    			e.getMessage();
+    			e.printStackTrace();
+    		}
+    	}
+    	if (fileFile == null) {
+    		reloadFile();
+    	}
+    	return fileFile;
     }
    
     /**
@@ -59,7 +59,7 @@ public class DataStorage {
      * @author HeadGam3z.
      */
     public void reloadFile() {
-            fileFile = YamlConfiguration.loadConfiguration(file);
+    	fileFile = YamlConfiguration.loadConfiguration(file);
     }
    
     /**
@@ -69,11 +69,11 @@ public class DataStorage {
      * @author HeadGam3z.
      */
     public void saveFile() {
-            try {
-                    getFile().save(file);
-            } catch (IOException e) {
-                    e.getMessage();
-                    e.printStackTrace();
-            }
+    	try {
+    		getFile().save(file);
+    	} catch (IOException e) {
+    		e.getMessage();
+    		e.printStackTrace();
+    	}
     }
 }

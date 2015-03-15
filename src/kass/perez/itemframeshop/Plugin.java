@@ -20,7 +20,7 @@ public class Plugin extends JavaPlugin {
 	public void onEnable() {
 		plugin = this;
 		Util.log(Level.INFO, "----------------------------");
-		Util.log(Level.INFO, "Bishop v" + getDescription().getVersion() + " is enabling!");
+		Util.log(Level.INFO, "ItemFrameShop v" + getDescription().getVersion() + " is enabling!");
 		Util.log(Level.INFO, "By " + getDescription().getAuthors());
 		Util.log(Level.INFO, "----------------------------");
 		registerCommands();
@@ -36,7 +36,7 @@ public class Plugin extends JavaPlugin {
 	public void onDisable() {
 		plugin = null;
 		Util.log(Level.INFO, "----------------------------");
-		Util.log(Level.INFO, "Bishop v" + getDescription().getVersion() + " is disabling!");
+		Util.log(Level.INFO, "ItemFrameShop v" + getDescription().getVersion() + " is disabling!");
 		Util.log(Level.INFO, "By " + getDescription().getAuthors());
 		Util.log(Level.INFO, "----------------------------");
 	}
