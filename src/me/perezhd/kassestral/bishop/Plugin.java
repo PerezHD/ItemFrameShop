@@ -3,6 +3,7 @@ package me.perezhd.kassestral.bishop;
 import java.util.logging.Level;
 
 import me.perezhd.kassestral.bishop.commands.PluginCommandHandler;
+import me.perezhd.kassestral.bishop.files.Configuration;
 import me.perezhd.kassestral.bishop.files.DataStorage;
 import me.perezhd.kassestral.bishop.files.MessageStorage;
 import me.perezhd.kassestral.bishop.hooks.VaultHook;
@@ -36,6 +37,7 @@ public class Plugin extends JavaPlugin {
 		 */
 		storage.setupFile();
 		message_storage.setupFile();
+		Configuration.loadConfiguration();
 		/*
 		 * Hooks
 		 */
