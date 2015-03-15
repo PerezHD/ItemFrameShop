@@ -1,4 +1,4 @@
-package kass.perez.itemframeshop.handlers;
+package me.perezhd.kassestral.bishop.handlers;
 
 import org.bukkit.permissions.Permission;
 

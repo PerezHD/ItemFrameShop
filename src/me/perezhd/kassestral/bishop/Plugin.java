@@ -1,12 +1,14 @@
-package kass.perez.itemframeshop;
+package me.perezhd.kassestral.bishop;
 
 import java.util.logging.Level;
 
-import kass.perez.itemframeshop.commands.PluginCommandHandler;
-import kass.perez.itemframeshop.hooks.VaultHook;
-import kass.perez.itemframeshop.listeners.EventListeners;
-import kass.perez.itemframeshop.listeners.PlayerListeners;
-import kass.perez.itemframeshop.utils.Util;
+import me.perezhd.kassestral.bishop.commands.PluginCommandHandler;
+import me.perezhd.kassestral.bishop.files.DataStorage;
+import me.perezhd.kassestral.bishop.files.MessageStorage;
+import me.perezhd.kassestral.bishop.hooks.VaultHook;
+import me.perezhd.kassestral.bishop.listeners.EventListeners;
+import me.perezhd.kassestral.bishop.listeners.PlayerListeners;
+import me.perezhd.kassestral.bishop.utils.Util;
 
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,6 +18,7 @@ public class Plugin extends JavaPlugin {
 	public static Plugin plugin;
 	
 	public DataStorage storage = new DataStorage();
+	public MessageStorage message_storage = new MessageStorage();
 	public VaultHook vault = new VaultHook(this);
 
 	@Override
@@ -32,6 +35,7 @@ public class Plugin extends JavaPlugin {
 		 * Loads the main files in the dataFolder.
 		 */
 		storage.setupFile();
+		message_storage.setupFile();
 		Configuration.loadConfiguration();
 		/*
 		 * Hooks

@@ -1,4 +1,4 @@
-package kass.perez.itemframeshop;
+package me.perezhd.kassestral.bishop.files;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,14 +6,14 @@ import java.io.IOException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-public class DataStorage {
+public class MessageStorage {
     
     private File folder, file;
     private FileConfiguration fileFile;
 
-    public DataStorage() {
+    public MessageStorage() {
     	this.folder = new File("plugins" + File.separator + "ItemFrameShop");
-    	this.file = new File(folder, "shops.yml");
+    	this.file = new File(folder, "messages.yml");
     	this.fileFile = null;
     }
    
@@ -23,7 +23,7 @@ public class DataStorage {
      * @author HeadGam3z.
      */
     public void setupFile() {
-    	getFile().options().header("Where all shops get saved to.");
+    	getFile().options().header("Where all messaged get stored to.");
     	getFile().options().copyDefaults(true);
     	saveFile();
     }

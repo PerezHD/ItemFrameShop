@@ -1,7 +1,7 @@
 name: ItemFrameShop
 author: PerezHD, Kassestral
-version: 1.0.8
-main: kass.perez.itemframeshop.Plugin
+version: 1.0.9
+main: me.perezhd.kassestral.bishop.Plugin
 description: A item frame shop plugin!
 depend: [Vault]
 commands:

@@ -1,4 +1,4 @@
-package kass.perez.itemframeshop.listeners;
+package me.perezhd.kassestral.bishop.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +10,7 @@ public class PlayerListeners implements Listener {
 	
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e){
-		Player p = e.getPlayer();
+		Player player = e.getPlayer();
 		Action action = e.getAction();
 		
 		/*

@@ -1,14 +1,16 @@
-package kass.perez.itemframeshop.commands;
+package me.perezhd.kassestral.bishop.commands;
 
-import kass.perez.itemframeshop.Plugin;
-import kass.perez.itemframeshop.handlers.Permissions;
-import kass.perez.itemframeshop.utils.Util;
+import me.perezhd.kassestral.bishop.Plugin;
+import me.perezhd.kassestral.bishop.handlers.Permissions;
+import me.perezhd.kassestral.bishop.utils.Util;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class PluginCommandHandler implements CommandExecutor {
+	
+	public static Plugin plugin = Plugin.getInstance();
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label,String[] args) {
 		if (sender.hasPermission(Permissions.ifs_admin)){
@@ -26,10 +28,12 @@ public class PluginCommandHandler implements CommandExecutor {
 					/*
 					 * Reloads and saves the configuration and data files!
 					 */
-					Plugin.getInstance().reloadConfig();
-					Plugin.getInstance().saveConfig();
-					Plugin.getInstance().storage.reloadFile();
-					Plugin.getInstance().storage.saveFile();
+					plugin.reloadConfig();
+					plugin.saveConfig();
+					plugin.storage.reloadFile();
+					plugin.storage.saveFile();
+					plugin.message_storage.reloadFile();
+					plugin.message_storage.saveFile();
 					return true;
 				}
 			}
@@ -49,6 +53,7 @@ public class PluginCommandHandler implements CommandExecutor {
 	private void helpDisplay(CommandSender sender){
 		Util.send(sender, "&e&m----------------------------------------");
 		Util.send(sender, "&b/ifs reload - Reloads all files!");
+		Util.send(sender, "&b/ifs version - Checks your current version!");
 		Util.send(sender, "&e&m----------------------------------------");
 	}
 }

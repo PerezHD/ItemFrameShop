@@ -1,8 +1,8 @@
-package kass.perez.itemframeshop.utils;
+package me.perezhd.kassestral.bishop.utils;
 
 import java.util.logging.Level;
 
-import kass.perez.itemframeshop.Plugin;
+import me.perezhd.kassestral.bishop.Plugin;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -29,13 +29,13 @@ public class Util {
 		Plugin.getInstance().getLogger().info(level + "[ItemFrameShop] " + log);
 	}
 	
-    public static void regenFirework(Location shootLocation, Player player) {
-        Firework firework = player.getWorld().spawn(shootLocation, Firework.class);
-        FireworkMeta fireworkmeta = firework.getFireworkMeta();
+	public static void regenFirework(Location shootLocation, Player player) {
+		Firework firework = player.getWorld().spawn(shootLocation, Firework.class);
+		FireworkMeta fireworkmeta = firework.getFireworkMeta();
                  
-        FireworkEffect effect = FireworkEffect.builder().withColor(Color.BLUE.mixColors(Color.YELLOW.mixColors(Color.GREEN))).with(Type.BALL_LARGE).withFade(Color.PURPLE).build();
-        fireworkmeta.addEffects(effect);
-        fireworkmeta.setPower(1);     
-        firework.setFireworkMeta(fireworkmeta);
-    }
+		FireworkEffect effect = FireworkEffect.builder().withColor(Color.BLUE.mixColors(Color.YELLOW.mixColors(Color.GREEN))).with(Type.BALL_LARGE).withFade(Color.PURPLE).build();
+		fireworkmeta.addEffects(effect);
+		fireworkmeta.setPower(1);     
+		firework.setFireworkMeta(fireworkmeta);
+	}
 }

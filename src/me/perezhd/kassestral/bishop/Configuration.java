@@ -1,4 +1,4 @@
-package kass.perez.itemframeshop;
+package me.perezhd.kassestral.bishop;
 
 import org.bukkit.configuration.file.FileConfiguration;
 
