@@ -23,8 +23,13 @@ public class PluginCommandHandler implements CommandExecutor {
 			if (args.length == 1){
 				if (args[0].equalsIgnoreCase("reload")){
 					Util.send(sender, "&aSuccessfully reloaded all files!");
+					/*
+					 * Reloads and saves the configuration and data files!
+					 */
 					Plugin.getInstance().reloadConfig();
+					Plugin.getInstance().saveConfig();
 					Plugin.getInstance().storage.reloadFile();
+					Plugin.getInstance().storage.saveFile();
 					return true;
 				}
 			}

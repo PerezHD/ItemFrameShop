@@ -26,7 +26,11 @@ public class Plugin extends JavaPlugin {
 		registerCommands();
 		registerEvents();
 		
+		/*
+		 * Loads the main files in the dataFolder.
+		 */
 		storage.setupFile();
+		Configuration.loadConfiguration();
 	}
 
 	public void onDisable() {
