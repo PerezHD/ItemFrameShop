@@ -16,6 +16,5 @@ public class PlayerListeners implements Listener {
 		/*
 		 * When a player right clicks a shop sign.
 		 */
-		if ()
 	}
 }

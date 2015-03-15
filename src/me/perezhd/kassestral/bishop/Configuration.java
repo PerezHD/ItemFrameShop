@@ -1,4 +1,6 @@
-package me.perezhd.kassestral.bishop;
+package src.me.perezhd.kassestral.bishop;
+
+import me.perezhd.kassestral.bishop.Plugin;
 
 import org.bukkit.configuration.file.FileConfiguration;
 
